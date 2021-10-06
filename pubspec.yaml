@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.0.12
   velocity_x: ^3.3.0
   url_strategy: ^0.2.0
+  google_fonts: ^2.1.0
   
 
 dev_dependencies:
@@ -59,8 +60,8 @@ dev_dependencies:
 flutter:
 
   assets:
-    - assets/imgs/GitHub-Emblem.png
-    - assets/imgs/linkedin-logo2.png
+    - assets/
+    - assets/imgs/
 
   fonts:
     - family: Poppin

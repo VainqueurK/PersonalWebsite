@@ -68,7 +68,9 @@ class _HomePageState extends State<HomePage> {
                           InkWell(
                             onTap: () =>
                                 launch('https://github.com/VainqueurK'),
-                            child: SizedBox(
+                            child: Container(
+                                constraints: const BoxConstraints(
+                                    minWidth: 140, minHeight: 100),
                                 height: Statics.DEVICE_HEIGHT(context) * 0.05,
                                 width: Statics.DEVICE_WIDTH(context) * 0.05,
                                 child: const Image(
@@ -82,8 +84,9 @@ class _HomePageState extends State<HomePage> {
                           InkWell(
                             onTap: () => launch(
                                 'https://www.linkedin.com/in/vainqueur/'),
-                            child: SizedBox(
-                                //linkedIN
+                            child: Container(
+                                constraints: const BoxConstraints(
+                                    minWidth: 140, minHeight: 100),
                                 height: Statics.DEVICE_HEIGHT(context) * 0.05,
                                 width: Statics.DEVICE_WIDTH(context) * 0.05,
                                 child: const Image(
@@ -97,10 +100,8 @@ class _HomePageState extends State<HomePage> {
                         height: Statics.DEVICE_HEIGHT(context) * 0.05,
                       ),
                       InkWell(
-                        onTap: () {
-                          print("Downloading CV");
-                          //    ---------------------------------------------- Find a way to download files
-                        },
+                        onTap: () => launch(
+                            'https://drive.google.com/uc?export=download&id=1UqC8LS93YHQBUrIVyL6p_5zF6L8jttQZ'),
                         onHover: (hover) {
                           setState(() {
                             downloadTextColor =
@@ -150,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SizedBox(
-                    height: Statics.DEVICE_HEIGHT(context) * 0.02,
+                    height: Statics.DEVICE_HEIGHT(context) * 0.04,
                   ),
                   SizedBox(
                     child: InkWell(
@@ -174,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SizedBox(
-                    height: Statics.DEVICE_HEIGHT(context) * 0.02,
+                    height: Statics.DEVICE_HEIGHT(context) * 0.04,
                   ),
                   SizedBox(
                     child: InkWell(

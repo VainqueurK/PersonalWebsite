@@ -1,34 +1,17 @@
-2021/10/04-21:36:20.423 75cc Reusing MANIFEST C:\Users\V\AppData\Local\Temp\flutter_tools.72658df\flutter_tools_chrome_device.441f75b7\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2021/10/04-21:36:20.424 75cc Recovering log #50
-2021/10/04-21:36:20.427 75cc Reusing old log C:\Users\V\AppData\Local\Temp\flutter_tools.72658df\flutter_tools_chrome_device.441f75b7\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000050.log 
-2021/10/04-21:36:20.427 75cc Delete type=0 #3
-2021/10/04-21:36:20.427 75cc Delete type=0 #18
-2021/10/04-21:36:20.427 75cc Delete type=2 #20
-2021/10/04-21:36:20.427 75cc Delete type=2 #27
-2021/10/04-21:36:20.427 75cc Delete type=0 #28
-2021/10/04-21:36:20.427 75cc Delete type=2 #30
-2021/10/04-21:36:20.427 75cc Delete type=2 #49
-2021/10/04-21:36:21.404 7a80 Manual compaction at level-0 from '\x00\x19\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1a\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/04-21:36:21.639 6098 Level-0 table #55: started
-2021/10/04-21:36:21.645 6098 Level-0 table #55: 301530 bytes OK
-2021/10/04-21:36:21.646 6098 Delete type=0 #50
-2021/10/04-21:36:21.646 6098 Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/04-21:36:21.798 78ac Level-0 table #57: started
-2021/10/04-21:36:21.801 78ac Level-0 table #57: 5713 bytes OK
-2021/10/04-21:36:21.802 78ac Delete type=0 #54
-2021/10/04-21:36:21.802 78ac Manual compaction at level-0 from '\x00\x1c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1c\x01\x1f\x03f\xe6\xbeM"\xc5wB\x00\x01\x17\x00y\x00t\x00-\x00r\x00e\x00d\x00i\x00r\x00e\x00c\x00t\x00-\x00p\x00r\x00e\x00f\x00e\x00t\x00c\x00h\x00-\x00i\x00d' @ 24039 : 0
-2021/10/04-21:36:21.802 78ac Compacting 1@0 + 1@1 files
-2021/10/04-21:36:21.805 78ac Generated table #58@0: 1470 keys, 32083 bytes
-2021/10/04-21:36:21.805 78ac Compacted 1@0 + 1@1 files => 32083 bytes
-2021/10/04-21:36:21.806 78ac compacted to: files[ 0 1 1 0 0 0 0 ]
-2021/10/04-21:36:21.807 78ac Delete type=2 #57
-2021/10/04-21:36:21.807 78ac Manual compaction at level-0 from '\x00\x1c\x01\x1f\x03f\xe6\xbeM"\xc5wB\x00\x01\x17\x00y\x00t\x00-\x00r\x00e\x00d\x00i\x00r\x00e\x00c\x00t\x00-\x00p\x00r\x00e\x00f\x00e\x00t\x00c\x00h\x00-\x00i\x00d' @ 24039 : 0 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/04-21:36:21.845 6098 Manual compaction at level-0 from '\x00\x1a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1b\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/04-21:36:21.850 32ac Manual compaction at level-0 from '\x00\x1d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1e\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/04-21:36:35.086 32ac Compacting 1@1 + 1@2 files
-2021/10/04-21:36:35.089 32ac Generated table #59@1: 290 keys, 22106 bytes
-2021/10/04-21:36:35.089 32ac Compacted 1@1 + 1@2 files => 22106 bytes
-2021/10/04-21:36:35.090 32ac compacted to: files[ 0 0 1 0 0 0 0 ]
-2021/10/04-21:36:35.090 32ac Delete type=2 #52
-2021/10/04-21:36:35.090 32ac Delete type=2 #55
-2021/10/04-21:36:35.090 32ac Delete type=2 #58
+2021/10/05-23:58:05.354 1f34 Reusing MANIFEST C:\Users\V\AppData\Local\Temp\flutter_tools.86916a1c\flutter_tools_chrome_device.5d558494\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/05-23:58:05.355 1f34 Recovering log #85
+2021/10/05-23:58:05.357 1f34 Reusing old log C:\Users\V\AppData\Local\Temp\flutter_tools.86916a1c\flutter_tools_chrome_device.5d558494\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000085.log 
+2021/10/05-23:58:05.358 1f34 Delete type=0 #3
+2021/10/05-23:58:05.358 1f34 Delete type=0 #18
+2021/10/05-23:58:05.358 1f34 Delete type=2 #20
+2021/10/05-23:58:05.358 1f34 Delete type=2 #27
+2021/10/05-23:58:05.358 1f34 Delete type=0 #28
+2021/10/05-23:58:05.358 1f34 Delete type=2 #30
+2021/10/05-23:58:05.358 1f34 Delete type=2 #49
+2021/10/05-23:58:05.358 1f34 Delete type=0 #50
+2021/10/05-23:58:05.358 1f34 Delete type=2 #52
+2021/10/05-23:58:05.358 1f34 Delete type=0 #56
+2021/10/05-23:58:05.358 1f34 Delete type=2 #59
+2021/10/05-23:58:05.358 1f34 Delete type=2 #66
+2021/10/05-23:58:05.358 1f34 Delete type=0 #67
+2021/10/05-23:58:05.358 1f34 Delete type=2 #69

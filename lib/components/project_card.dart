@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:static_website/components/tag_card.dart';
 import 'package:static_website/config/statics.dart';
 import 'package:static_website/models/tags.dart';
 
 class ProjectCard extends StatefulWidget {
   Color fontColor;
   double fontSize;
+  List<String> asset = [];
   String fontFamily;
   String text;
   String title;
@@ -13,9 +15,10 @@ class ProjectCard extends StatefulWidget {
     Key? key,
     this.fontColor = Colors.black87,
     this.fontFamily = "roboto",
-    this.fontSize = 24,
+    this.fontSize = 18,
     this.title = "N/A",
     this.text = "N/A",
+    required this.asset,
     required this.tags,
   }) : super(key: key);
 
@@ -28,15 +31,15 @@ class _ProjectCardState extends State<ProjectCard> {
   Widget build(BuildContext context) {
     return Container(
       width: Statics.DEVICE_WIDTH(context) * 0.5,
+      constraints: const BoxConstraints(minWidth: 800),
       child: Row(
         children: [
           Container(
             width: Statics.DEVICE_WIDTH(context) * 0.14,
-            height: Statics.DEVICE_HEIGHT(context) * 0.3,
+            height: Statics.DEVICE_HEIGHT(context) * 0.5,
             constraints: const BoxConstraints(
                 maxWidth: 400, maxHeight: 600, minHeight: 300, minWidth: 300),
             decoration: BoxDecoration(
-              color: Colors.white,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
@@ -47,14 +50,20 @@ class _ProjectCardState extends State<ProjectCard> {
                 ),
               ],
             ),
+            child: FittedBox(
+              fit: BoxFit.fill,
+              child: Image(
+                image: AssetImage(widget.asset.first),
+              ),
+            ),
           ),
           SizedBox(
-            width: Statics.DEVICE_WIDTH(context) * 0.017,
+            width: Statics.DEVICE_WIDTH(context) * 0.02,
           ),
           Flexible(
             child: Container(
-              height: Statics.DEVICE_HEIGHT(context) * 0.17,
-              constraints: BoxConstraints(minHeight: 200, minWidth: 500),
+              height: Statics.DEVICE_HEIGHT(context) * 0.3,
+              constraints: const BoxConstraints(minHeight: 200, minWidth: 500),
               child: Expanded(
                 flex: 1,
                 child: Column(
@@ -66,8 +75,11 @@ class _ProjectCardState extends State<ProjectCard> {
                       overflow: TextOverflow.visible,
                       style: const TextStyle(
                         fontFamily: 'Rubik',
-                        fontSize: 50,
+                        fontSize: 30,
                       ),
+                    ),
+                    SizedBox(
+                      height: Statics.DEVICE_HEIGHT(context) * 0.02,
                     ),
                     Expanded(
                       flex: 1,
@@ -82,6 +94,18 @@ class _ProjectCardState extends State<ProjectCard> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: Statics.DEVICE_HEIGHT(context) * 0.02,
+                    ),
+                    Row(
+                        children: widget.tags.tags
+                            .map((e) => Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                  ),
+                                  child: TagCard(tag: e),
+                                ))
+                            .toList()),
                   ],
                 ),
               ),
