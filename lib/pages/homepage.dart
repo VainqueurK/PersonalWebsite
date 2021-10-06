@@ -24,9 +24,10 @@ class _HomePageState extends State<HomePage> {
   Color? aboutTextColor = Colors.grey[800];
   Color? projectsTextColor = Colors.grey[800];
   Color? contactTextColor = Colors.grey[800];
-  Color? downloadTextColor = Colors.grey[800];
+  Color? downloadTextColor = Colors.grey[400];
 
   Color? normalColor = Colors.grey[800];
+  Color? normalColor2 = Colors.grey[400];
   Color? hoverColor = const Color(0xFFFFB52E);
 
   @override
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         height: Statics.DEVICE_HEIGHT(context),
         width: double.infinity,
-        color: Colors.grey[100], //Color(0xFF121212),
+        color: Colors.black, //Colors.grey[100], //Color(0xFF121212),
         child: Row(
           children: [
             Expanded(
@@ -44,8 +45,8 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
+                      const Padding(
+                        padding: EdgeInsets.all(100.0),
                         child: FittedBox(
                           fit: BoxFit.contain,
                           child: Text(
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(
                               fontSize: 200,
                               fontFamily: 'SignitureA',
-                              color: Colors.grey[900],
+                              color: Colors.white, //Colors.grey[900],
                             ),
                           ),
                         ),
@@ -73,9 +74,10 @@ class _HomePageState extends State<HomePage> {
                                     minWidth: 140, minHeight: 100),
                                 height: Statics.DEVICE_HEIGHT(context) * 0.05,
                                 width: Statics.DEVICE_WIDTH(context) * 0.05,
-                                child: const Image(
-                                  image: AssetImage(
-                                      'assets/imgs/GitHub-Emblem.png'),
+                                child: Image.asset(
+                                  'assets/imgs/GitHub-Emblem.png',
+                                  filterQuality: FilterQuality.high,
+                                  fit: BoxFit.fitWidth,
                                 )),
                           ),
                           SizedBox(
@@ -89,9 +91,10 @@ class _HomePageState extends State<HomePage> {
                                     minWidth: 140, minHeight: 100),
                                 height: Statics.DEVICE_HEIGHT(context) * 0.05,
                                 width: Statics.DEVICE_WIDTH(context) * 0.05,
-                                child: const Image(
-                                  image: AssetImage(
-                                      'assets/imgs/linkedin-logo2.png'),
+                                child: Image.asset(
+                                  'assets/imgs/linkedin-logo2.png',
+                                  filterQuality: FilterQuality.high,
+                                  fit: BoxFit.fitWidth,
                                 )),
                           ),
                         ],
@@ -105,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                         onHover: (hover) {
                           setState(() {
                             downloadTextColor =
-                                hover ? hoverColor : normalColor;
+                                hover ? hoverColor : normalColor2;
                           });
                         },
                         child: Text(

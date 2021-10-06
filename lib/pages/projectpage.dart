@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:static_website/components/project_card.dart';
 import 'package:static_website/config/statics.dart';
+import 'package:static_website/models/project.dart';
 import 'package:static_website/models/tags.dart';
 import 'package:static_website/routing/routes.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
@@ -29,6 +30,9 @@ class _ProjectsPageState extends State<ProjectsPage> {
                   height: Statics.DEVICE_HEIGHT(context) * 0.28,
                   width: double.infinity,
                   color: Colors.black,
+                  constraints: BoxConstraints(
+                    minHeight: 300,
+                  ),
                 ),
                 Container(
                   height: Statics.DEVICE_HEIGHT(context) * 3,
@@ -70,14 +74,14 @@ class _ProjectsPageState extends State<ProjectsPage> {
                             constraints: const BoxConstraints(minWidth: 800),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     "Projects",
                                     style: TextStyle(
                                       fontFamily: 'Rubik',
                                       fontSize: 80,
-                                      color: Colors.white,
+                                      color: Colors.grey[400],
                                     ),
                                   ),
                                 ),
@@ -89,12 +93,20 @@ class _ProjectsPageState extends State<ProjectsPage> {
                                           Statics.DEVICE_HEIGHT(context) * 0.05,
                                     ),
                                     ProjectCard(
-                                      asset: [Statics.fakebook1],
-                                      title: "FakeBook: Social Media App",
-                                      text:
+                                      imgWidth:
+                                          Statics.DEVICE_WIDTH(context) * 0.12,
+                                      project: Project(
+                                          "FakeBook: Social Media App",
                                           "Fakebook is a social media application that was written using java and is compatible with android versions 5 and above. The app offers an integrated messaging system where users can communicate with their friends and anybody that they have connected with on the app. The app also has a modern and slick orange colour scheme and allows for a variety of customization options of your personal profile. The app uses Firebase in order to store user details along with messages by that user.",
-                                      tags:
-                                          Tags(["Java", "JavaFX", "Test tag"]),
+                                          Tags(["Java", "JavaFX"]), [
+                                        Statics.fakebook1,
+                                        Statics.fakebook2,
+                                        Statics.fakebook3,
+                                        Statics.fakebook4,
+                                        Statics.fakebook5,
+                                        Statics.fakebook6,
+                                        Statics.fakebook8
+                                      ]),
                                     ),
                                   ],
                                 ),

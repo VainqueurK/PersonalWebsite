@@ -40,7 +40,6 @@ class _AboutPageState extends State<AboutPage> {
                 },
                 child: Row(
                   children: [
-                    //const Icon(FlutterIcons.arrow_left_fea),
                     Text(
                       "< Home",
                       style: TextStyle(
