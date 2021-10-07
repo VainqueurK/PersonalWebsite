@@ -19,21 +19,27 @@ class _TagCardState extends State<TagCard> {
           width: Statics.DEVICE_WIDTH(context) * 0.05,
           height: Statics.DEVICE_HEIGHT(context) * 0.03,
           constraints: const BoxConstraints(
-            minWidth: 90,
+            minWidth: 60,
             minHeight: 30,
           ),
-          decoration: const BoxDecoration(
-              color: Colors.black,
+          decoration: BoxDecoration(
+              color: Colors.grey[900],
               borderRadius: BorderRadius.all(Radius.circular(50))),
         ),
         Row(
           children: [
             //add icon of the described text here <-----------------------
-            Text(
-              widget.tag,
-              style: const TextStyle(
-                fontSize: 18,
-                color: Colors.white,
+            FittedBox(
+              fit: BoxFit.fill,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  widget.tag,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey[200],
+                  ),
+                ),
               ),
             ),
           ],

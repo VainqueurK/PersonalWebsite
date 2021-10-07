@@ -30,7 +30,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
                   height: Statics.DEVICE_HEIGHT(context) * 0.28,
                   width: double.infinity,
                   color: Colors.black,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     minHeight: 300,
                   ),
                 ),
@@ -107,6 +107,55 @@ class _ProjectsPageState extends State<ProjectsPage> {
                                         Statics.fakebook6,
                                         Statics.fakebook8
                                       ]),
+                                    ),
+                                    SizedBox(
+                                      height:
+                                          Statics.DEVICE_HEIGHT(context) * 0.05,
+                                    ),
+                                    ProjectCard(
+                                      //research based project example
+                                      imgHeight:
+                                          Statics.DEVICE_HEIGHT(context) * 0.05,
+                                      hConstraint: 400,
+                                      wConstraint: 400,
+                                      project: Project(
+                                          "Vehicle Speed Detection with an Uncalibrated Camera",
+                                          "Final year project, a computer vision and machine learning project to try to estimate the speed of oncoming vehicles from a single video without any information on the environment or camera angles and perspective. Using Visual Studio Code as the text editor/IDE.",
+                                          Tags([
+                                            "Python",
+                                            "YOLOv4",
+                                            "DeepSORT",
+                                            "OpenCV",
+                                            "PyQt5"
+                                          ]),
+                                          [
+                                            Statics.placeholder,
+                                          ]),
+                                    ),
+                                    SizedBox(
+                                      height:
+                                          Statics.DEVICE_HEIGHT(context) * 0.05,
+                                    ),
+                                    ProjectCard(
+                                      //website example & windows app
+                                      imgHeight:
+                                          Statics.DEVICE_HEIGHT(context) * 0.35,
+                                      imgWidth:
+                                          Statics.DEVICE_WIDTH(context) * 0.275,
+                                      hConstraint: 100,
+                                      wConstraint: 400,
+                                      project: Project(
+                                          "Vehicle Speed Detection with an Uncalibrated Camera",
+                                          "Final year project, a computer vision and machine learning project to try to estimate the speed of oncoming vehicles from a single video without any information on the environment or camera angles and perspective. Using Visual Studio Code as the text editor/IDE.",
+                                          Tags([
+                                            "Python",
+                                            "YOLOv4",
+                                            "OpenCV",
+                                            "PyQt5"
+                                          ]),
+                                          [
+                                            Statics.placeholder,
+                                          ]),
                                     ),
                                   ],
                                 ),

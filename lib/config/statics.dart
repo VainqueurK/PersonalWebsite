@@ -8,6 +8,7 @@ class Statics {
   static double DEVICE_HEIGHT(BuildContext context) =>
       MediaQuery.of(context).size.height;
 
+  static String placeholder = "assets/imgs/placeholder.jpg";
   static String fakebook1 = "assets/imgs/fakebook1.jpg";
   static String fakebook2 = "assets/imgs/fakebook2.jpg";
   static String fakebook3 = "assets/imgs/fakebook3.jpg";

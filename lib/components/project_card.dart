@@ -11,6 +11,8 @@ class ProjectCard extends StatefulWidget {
   double imgHeight;
   String fontFamily;
   Project project;
+  double hConstraint;
+  double wConstraint;
 
   ProjectCard({
     Key? key,
@@ -19,6 +21,8 @@ class ProjectCard extends StatefulWidget {
     this.fontSize = 18,
     this.imgHeight = -1,
     this.imgWidth = -1,
+    this.hConstraint = 600,
+    this.wConstraint = 300,
     required this.project,
   }) : super(key: key);
 
@@ -38,30 +42,34 @@ class _ProjectCardState extends State<ProjectCard> {
         children: [
           Stack(
             children: [
-              Container(
-                width: widget.imgWidth == -1
-                    ? Statics.DEVICE_WIDTH(context) * 0.14
-                    : widget.imgWidth,
-                height: widget.imgHeight == -1
-                    ? Statics.DEVICE_HEIGHT(context) * 0.5
-                    : widget.imgHeight,
-                constraints:
-                    const BoxConstraints(minHeight: 600, minWidth: 300),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Image.asset(
-                  widget.project.imgs[imgPage],
-                  filterQuality: FilterQuality.high,
-                  fit: BoxFit.fill,
+              Center(
+                child: Container(
+                  width: widget.imgWidth == -1
+                      ? Statics.DEVICE_WIDTH(context) * 0.14
+                      : widget.imgWidth,
+                  height: widget.imgHeight == -1
+                      ? Statics.DEVICE_HEIGHT(context) * 0.5
+                      : widget.imgHeight,
+                  constraints: BoxConstraints(
+                      minHeight: widget.hConstraint,
+                      minWidth: widget.wConstraint),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 4,
+                        blurRadius: 15,
+                        offset:
+                            const Offset(0, 2), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Image.asset(
+                    widget.project.imgs[imgPage],
+                    filterQuality: FilterQuality.high,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
               Container(
@@ -72,8 +80,9 @@ class _ProjectCardState extends State<ProjectCard> {
                 height: widget.imgHeight == -1
                     ? Statics.DEVICE_HEIGHT(context) * 0.5
                     : widget.imgHeight,
-                constraints:
-                    const BoxConstraints(minHeight: 600, minWidth: 300),
+                constraints: BoxConstraints(
+                    minHeight: widget.hConstraint,
+                    minWidth: widget.wConstraint),
                 child: Row(
                   children: [
                     InkWell(
@@ -93,13 +102,12 @@ class _ProjectCardState extends State<ProjectCard> {
                             : widget.imgHeight,
                         constraints: const BoxConstraints(
                             minHeight: 600, minWidth: 300 / 3),
-                        color: Colors.red.withOpacity(0.1),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Container(
                             height: Statics.DEVICE_HEIGHT(context) * 0.05,
                             width: Statics.DEVICE_WIDTH(context) * 0.027,
-                            color: Colors.black,
+                            //color: Colors.black,
                           ),
                         ),
                       ),
@@ -122,13 +130,12 @@ class _ProjectCardState extends State<ProjectCard> {
                             : widget.imgHeight,
                         constraints: const BoxConstraints(
                             minHeight: 600, minWidth: 300 / 3),
-                        color: Colors.green.withOpacity(0.1),
                         child: Align(
                           alignment: Alignment.centerRight,
                           child: Container(
                             height: Statics.DEVICE_HEIGHT(context) * 0.05,
                             width: Statics.DEVICE_WIDTH(context) * 0.027,
-                            color: Colors.black,
+                            //color: Colors.black,
                           ),
                         ),
                       ),
@@ -181,8 +188,8 @@ class _ProjectCardState extends State<ProjectCard> {
                     Row(
                         children: widget.project.tags.tags
                             .map((e) => Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 10,
+                                  padding: const EdgeInsets.only(
+                                    right: 15,
                                   ),
                                   child: TagCard(tag: e),
                                 ))
