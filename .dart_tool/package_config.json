@@ -80,6 +80,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "fluro",
+      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/fluro-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///D:/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -332,7 +338,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-06T14:07:20.277005Z",
+  "generated": "2021-10-07T13:35:09.297007Z",
   "generator": "pub",
   "generatorVersion": "2.14.2"
 }

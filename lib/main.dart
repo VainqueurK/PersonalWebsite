@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:static_website/pages/aboutpage.dart';
-import 'package:static_website/pages/contactpage.dart';
-import 'package:static_website/pages/homepage.dart';
-import 'package:static_website/pages/projectpage.dart';
-import 'package:velocity_x/velocity_x.dart';
-import 'components/header.dart';
-import 'config/statics.dart';
+import 'package:static_website/routing/router.dart';
 import 'package:url_strategy/url_strategy.dart';
-
-import 'routing/routes.dart';
 
 void main() {
   setPathUrlStrategy();
@@ -24,17 +16,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
+  void initState() {
+    super.initState();
+    MyRouter.setUpRouter();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       title: "Vainqueur",
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
-      routeInformationParser: VxInformationParser(),
-      routerDelegate: VxNavigator(routes: {
-        "/": (_, __) => MaterialPage(child: HomePage()),
-        MyRoutes.aboutRoute: (_, __) => MaterialPage(child: AboutPage()),
-        MyRoutes.projectsRoute: (_, __) => MaterialPage(child: ProjectsPage()),
-        MyRoutes.contactRoute: (_, __) => MaterialPage(child: ContactPage()),
-      }),
+      onGenerateRoute: MyRouter.router.generator,
     );
   }
 }

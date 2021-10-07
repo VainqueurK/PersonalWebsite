@@ -1,9 +1,13 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:static_website/config/statics.dart';
+import 'package:static_website/routing/router.dart';
+import 'package:static_website/routing/routes.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class ContactPage extends StatefulWidget {
-  ContactPage({Key? key}) : super(key: key);
+  final String page;
+  const ContactPage({Key? key, this.page = ""}) : super(key: key);
 
   @override
   _ContactPageState createState() => _ContactPageState();
@@ -29,8 +33,10 @@ class _ContactPageState extends State<ContactPage> {
                 left: 20,
               ),
               child: InkWell(
-                onTap: () async {
-                  context.vxNav.pop();
+                onTap: () {
+                  MyRouter.router.navigateTo(context, MyRoutes.homeRoute,
+                      transition: TransitionType.inFromBottom,
+                      transitionDuration: const Duration(milliseconds: 750));
                 },
                 onHover: (hover) {
                   setState(() {

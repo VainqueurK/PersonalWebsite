@@ -16,7 +16,7 @@ class _TagCardState extends State<TagCard> {
       alignment: AlignmentDirectional.center,
       children: [
         Container(
-          width: Statics.DEVICE_WIDTH(context) * 0.05,
+          width: Statics.DEVICE_WIDTH(context) * 0.06,
           height: Statics.DEVICE_HEIGHT(context) * 0.03,
           constraints: const BoxConstraints(
             minWidth: 60,

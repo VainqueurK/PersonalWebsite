@@ -1,15 +1,18 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:static_website/components/project_card.dart';
 import 'package:static_website/config/statics.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:static_website/models/tags.dart';
+import 'package:static_website/routing/router.dart';
 import 'package:static_website/routing/routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  final String page;
+  const HomePage({Key? key, this.page = ""}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -45,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(100.0),
                         child: FittedBox(
                           fit: BoxFit.contain,
@@ -55,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyle(
                               fontSize: 200,
                               fontFamily: 'SignitureA',
-                              color: Colors.white, //Colors.grey[900],
+                              color: Colors.grey[400], //Colors.grey[900],
                             ),
                           ),
                         ),
@@ -135,8 +138,9 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     child: InkWell(
                       onTap: () async {
-                        await context.vxNav
-                            .push(Uri.parse(MyRoutes.aboutRoute));
+                        MyRouter.router.navigateTo(context, MyRoutes.aboutRoute,
+                            transition: TransitionType.inFromBottom,
+                            transitionDuration: const Duration(seconds: 1));
                       },
                       onHover: (hover) {
                         setState(() {
@@ -159,8 +163,10 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     child: InkWell(
                       onTap: () async {
-                        await context.vxNav
-                            .push(Uri.parse(MyRoutes.projectsRoute));
+                        MyRouter.router.navigateTo(
+                            context, MyRoutes.projectsRoute,
+                            transition: TransitionType.inFromBottom,
+                            transitionDuration: const Duration(seconds: 1));
                       },
                       onHover: (hover) {
                         setState(() {
@@ -182,9 +188,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(
                     child: InkWell(
-                      onTap: () async {
-                        await context.vxNav
-                            .push(Uri.parse(MyRoutes.contactRoute));
+                      onTap: () {
+                        MyRouter.router.navigateTo(
+                            context, MyRoutes.contactRoute,
+                            transition: TransitionType.inFromBottom,
+                            transitionDuration: const Duration(seconds: 1));
                       },
                       onHover: (hover) {
                         setState(() {

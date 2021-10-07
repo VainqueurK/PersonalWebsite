@@ -1,10 +1,13 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:static_website/config/statics.dart';
+import 'package:static_website/routing/router.dart';
 import 'package:static_website/routing/routes.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class AboutPage extends StatefulWidget {
-  AboutPage({Key? key}) : super(key: key);
+  final String page;
+  const AboutPage({Key? key, this.page = ""}) : super(key: key);
 
   @override
   _AboutPageState createState() => _AboutPageState();
@@ -31,7 +34,9 @@ class _AboutPageState extends State<AboutPage> {
               ),
               child: InkWell(
                 onTap: () async {
-                  context.vxNav.pop();
+                  MyRouter.router.navigateTo(context, MyRoutes.homeRoute,
+                      transition: TransitionType.inFromBottom,
+                      transitionDuration: const Duration(milliseconds: 750));
                 },
                 onHover: (hover) {
                   setState(() {

@@ -1,54 +1,72 @@
-2021/10/06-15:41:16.422 792c Reusing MANIFEST C:\Users\V\AppData\Local\Temp\flutter_tools.69be97fc\flutter_tools_chrome_device.b7315f9d\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2021/10/06-15:41:16.422 792c Recovering log #108
-2021/10/06-15:41:16.428 792c Reusing old log C:\Users\V\AppData\Local\Temp\flutter_tools.69be97fc\flutter_tools_chrome_device.b7315f9d\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000108.log 
-2021/10/06-15:41:16.428 792c Delete type=0 #3
-2021/10/06-15:41:16.428 792c Delete type=0 #18
-2021/10/06-15:41:16.428 792c Delete type=2 #20
-2021/10/06-15:41:16.428 792c Delete type=2 #27
-2021/10/06-15:41:16.428 792c Delete type=0 #28
-2021/10/06-15:41:16.428 792c Delete type=2 #30
-2021/10/06-15:41:16.428 792c Delete type=2 #49
-2021/10/06-15:41:16.428 792c Delete type=0 #50
-2021/10/06-15:41:16.428 792c Delete type=2 #52
-2021/10/06-15:41:16.428 792c Delete type=0 #56
-2021/10/06-15:41:16.428 792c Delete type=2 #59
-2021/10/06-15:41:16.428 792c Delete type=2 #66
-2021/10/06-15:41:16.428 792c Delete type=0 #67
-2021/10/06-15:41:16.428 792c Delete type=2 #69
-2021/10/06-15:41:16.428 792c Delete type=0 #85
-2021/10/06-15:41:16.428 792c Delete type=2 #88
-2021/10/06-15:41:16.428 792c Delete type=2 #107
-2021/10/06-15:41:18.897 2380 Level-0 table #113: started
-2021/10/06-15:41:18.905 2380 Level-0 table #113: 503315 bytes OK
-2021/10/06-15:41:18.906 2380 Delete type=0 #108
-2021/10/06-15:41:18.907 2380 Manual compaction at level-0 from '\x00A\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00B\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/06-15:41:18.989 3014 Level-0 table #115: started
-2021/10/06-15:41:18.991 3014 Level-0 table #115: 2375 bytes OK
-2021/10/06-15:41:18.992 3014 Delete type=0 #112
-2021/10/06-15:41:18.993 3014 Manual compaction at level-0 from '\x00B\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00C\x00\x00\x00' @ 0 : 0; will stop at '\x00I\x00\x00\xc8\x05\x00m\x00e\x00d\x00i\x00a' @ 45925 : 1
-2021/10/06-15:41:18.993 3014 Compacting 1@0 + 1@1 files
-2021/10/06-15:41:19.001 3014 Generated table #116@0: 1943 keys, 31760 bytes
-2021/10/06-15:41:19.001 3014 Compacted 1@0 + 1@1 files => 31760 bytes
-2021/10/06-15:41:19.003 3014 compacted to: files[ 0 1 1 0 0 0 0 ]
-2021/10/06-15:41:19.003 3014 Delete type=2 #115
-2021/10/06-15:41:19.004 3014 Manual compaction at level-0 from '\x00I\x00\x00\xc8\x05\x00m\x00e\x00d\x00i\x00a' @ 45925 : 1 .. '\x00C\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/06-15:41:19.032 2944 Level-0 table #118: started
-2021/10/06-15:41:19.034 2944 Level-0 table #118: 973 bytes OK
-2021/10/06-15:41:19.036 2944 Delete type=2 #113
-2021/10/06-15:41:19.036 2944 Delete type=0 #114
-2021/10/06-15:41:19.036 2944 Manual compaction at level-0 from '\x00C\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00D\x00\x00\x00' @ 0 : 0; will stop at '\x00C\x01\x1f\x03f\x86\xff&\xc1:xB\x00\x01\x1c\x00y\x00t\x00-\x00m\x00i\x00n\x00i\x00p\x00l\x00a\x00y\x00e\x00r\x00-\x00s\x00h\x00o\x00w\x00n\x00-\x00v\x00i\x00d\x00e\x00o\x00-\x00i\x00d' @ 46067 : 0
-2021/10/06-15:41:19.036 2944 Compacting 1@0 + 1@1 files
-2021/10/06-15:41:19.039 2944 Generated table #119@0: 1924 keys, 31045 bytes
-2021/10/06-15:41:19.040 2944 Compacted 1@0 + 1@1 files => 31045 bytes
-2021/10/06-15:41:19.041 2944 compacted to: files[ 0 1 1 0 0 0 0 ]
-2021/10/06-15:41:19.041 2944 Delete type=2 #118
-2021/10/06-15:41:19.041 2944 Manual compaction at level-0 from '\x00C\x01\x1f\x03f\x86\xff&\xc1:xB\x00\x01\x1c\x00y\x00t\x00-\x00m\x00i\x00n\x00i\x00p\x00l\x00a\x00y\x00e\x00r\x00-\x00s\x00h\x00o\x00w\x00n\x00-\x00v\x00i\x00d\x00e\x00o\x00-\x00i\x00d' @ 46067 : 0 .. '\x00D\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/06-15:41:19.051 47dc Manual compaction at level-0 from '\x00@\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00A\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/06-15:41:19.066 47dc Manual compaction at level-0 from '\x00D\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00E\x00\x00\x00' @ 0 : 0; will stop at (end)
-2021/10/06-15:41:30.912 2944 Compacting 1@1 + 1@2 files
-2021/10/06-15:41:30.915 2944 Generated table #120@1: 336 keys, 17896 bytes
-2021/10/06-15:41:30.915 2944 Compacted 1@1 + 1@2 files => 17896 bytes
-2021/10/06-15:41:30.916 2944 compacted to: files[ 0 0 1 0 0 0 0 ]
-2021/10/06-15:41:30.917 2944 Delete type=2 #110
-2021/10/06-15:41:30.917 2944 Delete type=2 #116
-2021/10/06-15:41:30.917 2944 Delete type=2 #119
+2021/10/07-14:06:29.541 3ecc Reusing MANIFEST C:\Users\V\AppData\Local\Temp\flutter_tools.7af91a\flutter_tools_chrome_device.bf4678b2\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/07-14:06:29.541 3ecc Recovering log #141
+2021/10/07-14:06:29.545 3ecc Reusing old log C:\Users\V\AppData\Local\Temp\flutter_tools.7af91a\flutter_tools_chrome_device.bf4678b2\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000141.log 
+2021/10/07-14:06:29.546 3ecc Delete type=0 #3
+2021/10/07-14:06:29.546 3ecc Delete type=0 #18
+2021/10/07-14:06:29.546 3ecc Delete type=2 #20
+2021/10/07-14:06:29.546 3ecc Delete type=2 #27
+2021/10/07-14:06:29.546 3ecc Delete type=0 #28
+2021/10/07-14:06:29.546 3ecc Delete type=2 #30
+2021/10/07-14:06:29.546 3ecc Delete type=2 #49
+2021/10/07-14:06:29.546 3ecc Delete type=0 #50
+2021/10/07-14:06:29.546 3ecc Delete type=2 #52
+2021/10/07-14:06:29.546 3ecc Delete type=0 #56
+2021/10/07-14:06:29.546 3ecc Delete type=2 #59
+2021/10/07-14:06:29.546 3ecc Delete type=2 #66
+2021/10/07-14:06:29.546 3ecc Delete type=0 #67
+2021/10/07-14:06:29.546 3ecc Delete type=2 #69
+2021/10/07-14:06:29.546 3ecc Delete type=0 #85
+2021/10/07-14:06:29.546 3ecc Delete type=2 #88
+2021/10/07-14:06:29.546 3ecc Delete type=2 #107
+2021/10/07-14:06:29.546 3ecc Delete type=0 #108
+2021/10/07-14:06:29.546 3ecc Delete type=2 #110
+2021/10/07-14:06:29.546 3ecc Delete type=0 #117
+2021/10/07-14:06:29.546 3ecc Delete type=2 #120
+2021/10/07-14:06:29.546 3ecc Delete type=2 #127
+2021/10/07-14:06:29.546 3ecc Delete type=0 #128
+2021/10/07-14:06:29.546 3ecc Delete type=2 #130
+2021/10/07-14:06:29.546 3ecc Delete type=2 #140
+2021/10/07-14:06:31.140 8960 Manual compaction at level-0 from '\x00X\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00Y\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/07-14:06:31.308 8960 Level-0 table #146: started
+2021/10/07-14:06:31.314 8960 Level-0 table #146: 354137 bytes OK
+2021/10/07-14:06:31.316 8960 Delete type=0 #141
+2021/10/07-14:06:31.316 8960 Manual compaction at level-0 from '\x00Y\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00Z\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/07-14:06:31.457 2750 Level-0 table #148: started
+2021/10/07-14:06:31.460 2750 Level-0 table #148: 3234 bytes OK
+2021/10/07-14:06:31.461 2750 Delete type=0 #145
+2021/10/07-14:06:31.461 2750 Manual compaction at level-0 from '\x00[\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\\x00\x00\x00' @ 0 : 0; will stop at '\x00a\x00\x00\xc8\x05\x00m\x00e\x00d\x00i\x00a' @ 59156 : 1
+2021/10/07-14:06:31.461 2750 Compacting 1@0 + 1@1 files
+2021/10/07-14:06:31.466 2750 Generated table #149@0: 1704 keys, 37340 bytes
+2021/10/07-14:06:31.466 2750 Compacted 1@0 + 1@1 files => 37340 bytes
+2021/10/07-14:06:31.467 2750 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/10/07-14:06:31.467 2750 Delete type=2 #148
+2021/10/07-14:06:31.467 2750 Manual compaction at level-0 from '\x00a\x00\x00\xc8\x05\x00m\x00e\x00d\x00i\x00a' @ 59156 : 1 .. '\x00\\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/07-14:06:31.478 3ed0 Level-0 table #151: started
+2021/10/07-14:06:31.480 3ed0 Level-0 table #151: 2059 bytes OK
+2021/10/07-14:06:31.481 3ed0 Delete type=2 #146
+2021/10/07-14:06:31.481 3ed0 Delete type=0 #147
+2021/10/07-14:06:31.482 3ed0 Manual compaction at level-0 from '\x00Z\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00[\x00\x00\x00' @ 0 : 0; will stop at '\x00Z\x01 \x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x04\x02\x01\x17\x00s\x00e\x00r\x00v\x00i\x00c\x00e\x00:\x00t\x00o\x00p\x00b\x00a\x00r\x00:\x00f\x00a\x00l\x00l\x00b\x00a\x00c\x00k\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 59344 : 0
+2021/10/07-14:06:31.482 3ed0 Compacting 1@0 + 1@1 files
+2021/10/07-14:06:31.484 3ed0 Generated table #152@0: 1690 keys, 27759 bytes
+2021/10/07-14:06:31.485 3ed0 Compacted 1@0 + 1@1 files => 27759 bytes
+2021/10/07-14:06:31.486 3ed0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/10/07-14:06:31.486 3ed0 Delete type=2 #151
+2021/10/07-14:06:31.486 3ed0 Manual compaction at level-0 from '\x00Z\x01 \x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x04\x02\x01\x17\x00s\x00e\x00r\x00v\x00i\x00c\x00e\x00:\x00t\x00o\x00p\x00b\x00a\x00r\x00:\x00f\x00a\x00l\x00l\x00b\x00a\x00c\x00k\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 59344 : 0 .. '\x00[\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/07-14:06:31.560 2750 Level-0 table #154: started
+2021/10/07-14:06:31.561 2750 Level-0 table #154: 2381 bytes OK
+2021/10/07-14:06:31.563 2750 Delete type=2 #149
+2021/10/07-14:06:31.563 2750 Delete type=0 #150
+2021/10/07-14:06:31.563 2750 Manual compaction at level-0 from '\x00\\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00]\x00\x00\x00' @ 0 : 0; will stop at '\x00\\x00\x00\xc8\x05\x00m\x00e\x00d\x00i\x00a' @ 59440 : 0
+2021/10/07-14:06:31.563 2750 Compacting 1@0 + 1@1 files
+2021/10/07-14:06:31.566 2750 Generated table #155@0: 1687 keys, 28061 bytes
+2021/10/07-14:06:31.566 2750 Compacted 1@0 + 1@1 files => 28061 bytes
+2021/10/07-14:06:31.568 2750 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/10/07-14:06:31.568 2750 Delete type=2 #154
+2021/10/07-14:06:31.568 2750 Manual compaction at level-0 from '\x00\\x00\x00\xc8\x05\x00m\x00e\x00d\x00i\x00a' @ 59440 : 0 .. '\x00]\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/10/07-14:07:25.480 5b8c Compacting 1@1 + 1@2 files
+2021/10/07-14:07:25.483 5b8c Generated table #156@1: 398 keys, 17788 bytes
+2021/10/07-14:07:25.483 5b8c Compacted 1@1 + 1@2 files => 17788 bytes
+2021/10/07-14:07:25.484 5b8c compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/07-14:07:25.484 5b8c Delete type=2 #143
+2021/10/07-14:07:25.484 5b8c Delete type=2 #152
+2021/10/07-14:07:25.484 5b8c Delete type=2 #155

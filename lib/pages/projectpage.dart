@@ -1,13 +1,16 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:static_website/components/project_card.dart';
+import 'package:static_website/components/project_list.dart';
 import 'package:static_website/config/statics.dart';
 import 'package:static_website/models/project.dart';
 import 'package:static_website/models/tags.dart';
+import 'package:static_website/routing/router.dart';
 import 'package:static_website/routing/routes.dart';
-import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class ProjectsPage extends StatefulWidget {
-  const ProjectsPage({Key? key}) : super(key: key);
+  final String page;
+  const ProjectsPage({Key? key, this.page = ""}) : super(key: key);
 
   @override
   _ProjectsPageState createState() => _ProjectsPageState();
@@ -47,7 +50,11 @@ class _ProjectsPageState extends State<ProjectsPage> {
                         ),
                         child: InkWell(
                           onTap: () async {
-                            context.vxNav.pop();
+                            MyRouter.router.navigateTo(
+                                context, MyRoutes.homeRoute,
+                                transition: TransitionType.inFromBottom,
+                                transitionDuration:
+                                    const Duration(milliseconds: 750));
                           },
                           onHover: (hover) {
                             setState(() {
@@ -65,105 +72,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
                           ),
                         ),
                       ),
-                      Center(
-                        child: Expanded(
-                          flex: 1,
-                          child: Container(
-                            padding: const EdgeInsets.only(top: 100),
-                            width: Statics.DEVICE_WIDTH(context) * 0.5,
-                            constraints: const BoxConstraints(minWidth: 800),
-                            child: Column(
-                              children: [
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Projects",
-                                    style: TextStyle(
-                                      fontFamily: 'Rubik',
-                                      fontSize: 80,
-                                      color: Colors.grey[400],
-                                    ),
-                                  ),
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SizedBox(
-                                      height:
-                                          Statics.DEVICE_HEIGHT(context) * 0.05,
-                                    ),
-                                    ProjectCard(
-                                      imgWidth:
-                                          Statics.DEVICE_WIDTH(context) * 0.12,
-                                      project: Project(
-                                          "FakeBook: Social Media App",
-                                          "Fakebook is a social media application that was written using java and is compatible with android versions 5 and above. The app offers an integrated messaging system where users can communicate with their friends and anybody that they have connected with on the app. The app also has a modern and slick orange colour scheme and allows for a variety of customization options of your personal profile. The app uses Firebase in order to store user details along with messages by that user.",
-                                          Tags(["Java", "JavaFX"]), [
-                                        Statics.fakebook1,
-                                        Statics.fakebook2,
-                                        Statics.fakebook3,
-                                        Statics.fakebook4,
-                                        Statics.fakebook5,
-                                        Statics.fakebook6,
-                                        Statics.fakebook8
-                                      ]),
-                                    ),
-                                    SizedBox(
-                                      height:
-                                          Statics.DEVICE_HEIGHT(context) * 0.05,
-                                    ),
-                                    ProjectCard(
-                                      //research based project example
-                                      imgHeight:
-                                          Statics.DEVICE_HEIGHT(context) * 0.05,
-                                      hConstraint: 400,
-                                      wConstraint: 400,
-                                      project: Project(
-                                          "Vehicle Speed Detection with an Uncalibrated Camera",
-                                          "Final year project, a computer vision and machine learning project to try to estimate the speed of oncoming vehicles from a single video without any information on the environment or camera angles and perspective. Using Visual Studio Code as the text editor/IDE.",
-                                          Tags([
-                                            "Python",
-                                            "YOLOv4",
-                                            "DeepSORT",
-                                            "OpenCV",
-                                            "PyQt5"
-                                          ]),
-                                          [
-                                            Statics.placeholder,
-                                          ]),
-                                    ),
-                                    SizedBox(
-                                      height:
-                                          Statics.DEVICE_HEIGHT(context) * 0.05,
-                                    ),
-                                    ProjectCard(
-                                      //website example & windows app
-                                      imgHeight:
-                                          Statics.DEVICE_HEIGHT(context) * 0.35,
-                                      imgWidth:
-                                          Statics.DEVICE_WIDTH(context) * 0.275,
-                                      hConstraint: 100,
-                                      wConstraint: 400,
-                                      project: Project(
-                                          "Vehicle Speed Detection with an Uncalibrated Camera",
-                                          "Final year project, a computer vision and machine learning project to try to estimate the speed of oncoming vehicles from a single video without any information on the environment or camera angles and perspective. Using Visual Studio Code as the text editor/IDE.",
-                                          Tags([
-                                            "Python",
-                                            "YOLOv4",
-                                            "OpenCV",
-                                            "PyQt5"
-                                          ]),
-                                          [
-                                            Statics.placeholder,
-                                          ]),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      ProjectSection(),
                     ],
                   ),
                 ),

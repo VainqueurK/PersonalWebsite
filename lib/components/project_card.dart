@@ -36,7 +36,7 @@ class _ProjectCardState extends State<ProjectCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Statics.DEVICE_WIDTH(context) * 0.5,
+      width: Statics.DEVICE_WIDTH(context) * 0.6,
       constraints: const BoxConstraints(minWidth: 800),
       child: Row(
         children: [
@@ -152,50 +152,54 @@ class _ProjectCardState extends State<ProjectCard> {
             child: Container(
               height: Statics.DEVICE_HEIGHT(context) * 0.3,
               constraints: const BoxConstraints(minHeight: 200, minWidth: 500),
-              child: Expanded(
-                flex: 1,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      widget.project.title,
-                      overflow: TextOverflow.visible,
-                      style: const TextStyle(
-                        fontFamily: 'Rubik',
-                        fontSize: 30,
-                      ),
-                    ),
-                    SizedBox(
-                      height: Statics.DEVICE_HEIGHT(context) * 0.02,
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: SingleChildScrollView(
-                        child: Text(
-                          widget.project.desc,
-                          style: TextStyle(
-                              color: widget.fontColor,
-                              fontSize: widget.fontSize,
-                              fontFamily: widget.fontFamily,
-                              fontWeight: FontWeight.w300),
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          widget.project.title,
+                          overflow: TextOverflow.visible,
+                          style: const TextStyle(
+                            fontFamily: 'Rubik',
+                            fontSize: 30,
+                          ),
                         ),
-                      ),
+                        SizedBox(
+                          height: Statics.DEVICE_HEIGHT(context) * 0.02,
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: SingleChildScrollView(
+                            child: Text(
+                              widget.project.desc,
+                              style: TextStyle(
+                                  color: widget.fontColor,
+                                  fontSize: widget.fontSize,
+                                  fontFamily: widget.fontFamily,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: Statics.DEVICE_HEIGHT(context) * 0.02,
+                        ),
+                        Row(
+                            children: widget.project.tags.tags
+                                .map((e) => Padding(
+                                      padding: const EdgeInsets.only(
+                                        right: 15,
+                                      ),
+                                      child: TagCard(tag: e),
+                                    ))
+                                .toList()),
+                      ],
                     ),
-                    SizedBox(
-                      height: Statics.DEVICE_HEIGHT(context) * 0.02,
-                    ),
-                    Row(
-                        children: widget.project.tags.tags
-                            .map((e) => Padding(
-                                  padding: const EdgeInsets.only(
-                                    right: 15,
-                                  ),
-                                  child: TagCard(tag: e),
-                                ))
-                            .toList()),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
