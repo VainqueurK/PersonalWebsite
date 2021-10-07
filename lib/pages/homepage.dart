@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                     child: InkWell(
                       onTap: () async {
                         MyRouter.router.navigateTo(context, MyRoutes.aboutRoute,
-                            transition: TransitionType.inFromBottom,
+                            transition: TransitionType.cupertino,
                             transitionDuration: const Duration(seconds: 1));
                       },
                       onHover: (hover) {
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () async {
                         MyRouter.router.navigateTo(
                             context, MyRoutes.projectsRoute,
-                            transition: TransitionType.inFromBottom,
+                            transition: TransitionType.cupertino,
                             transitionDuration: const Duration(seconds: 1));
                       },
                       onHover: (hover) {
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         MyRouter.router.navigateTo(
                             context, MyRoutes.contactRoute,
-                            transition: TransitionType.inFromBottom,
+                            transition: TransitionType.cupertino,
                             transitionDuration: const Duration(seconds: 1));
                       },
                       onHover: (hover) {

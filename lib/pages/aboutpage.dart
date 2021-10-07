@@ -14,38 +14,39 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  Color? projectsTextColor = Colors.grey[800];
-  Color? normalColor = Colors.grey[800];
+  Color? projectsTextColor = Colors.grey[500];
+  Color? normalColor = Colors.grey[500];
   Color? hoverColor = const Color(0xFFFFB52E);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: Statics.DEVICE_HEIGHT(context),
+        height: Statics.DEVICE_HEIGHT(context) * 3,
         width: double.infinity,
-        color: Colors.grey[100],
+        color: Colors.black,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-              ),
-              child: InkWell(
-                onTap: () async {
-                  MyRouter.router.navigateTo(context, MyRoutes.homeRoute,
-                      transition: TransitionType.inFromBottom,
-                      transitionDuration: const Duration(milliseconds: 750));
-                },
-                onHover: (hover) {
-                  setState(() {
-                    projectsTextColor = hover ? hoverColor : normalColor;
-                  });
-                },
-                child: Row(
-                  children: [
-                    Text(
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                  ),
+                  child: InkWell(
+                    onTap: () async {
+                      MyRouter.router.navigateTo(context, MyRoutes.homeRoute,
+                          transition: TransitionType.cupertino,
+                          transitionDuration:
+                              const Duration(milliseconds: 750));
+                    },
+                    onHover: (hover) {
+                      setState(() {
+                        projectsTextColor = hover ? hoverColor : normalColor;
+                      });
+                    },
+                    child: Text(
                       "< Home",
                       style: TextStyle(
                         fontFamily: 'Rubik',
@@ -53,10 +54,36 @@ class _AboutPageState extends State<AboutPage> {
                         color: projectsTextColor,
                       ),
                     ),
-                  ],
+                  ),
+                ),
+              ],
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.grey[200],
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Container(
+                        height: Statics.DEVICE_HEIGHT(context) * .3,
+                        width: Statics.DEVICE_WIDTH(context),
+                        color: Colors.grey[200],
+                        child: const Center(
+                          child: Text(
+                            "Coming Soon...",
+                            style: TextStyle(
+                              fontSize: 90,
+                              fontFamily: 'Rubik',
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

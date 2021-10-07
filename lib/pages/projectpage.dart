@@ -52,7 +52,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
                           onTap: () async {
                             MyRouter.router.navigateTo(
                                 context, MyRoutes.homeRoute,
-                                transition: TransitionType.inFromBottom,
+                                transition: TransitionType.cupertino,
                                 transitionDuration:
                                     const Duration(milliseconds: 750));
                           },
