@@ -114,30 +114,6 @@ class _ProjectSectionState extends State<ProjectSection> {
                     vertical: Statics.DEVICE_HEIGHT(context) * 0.075,
                   ),
                   child: ProjectCard(
-                    //website example & windows app
-                    imgHeight: Statics.DEVICE_HEIGHT(context) * 0.35,
-                    imgWidth: Statics.DEVICE_WIDTH(context) * 0.275,
-                    hConstraint: 500,
-                    wConstraint: 800,
-                    project: Project(
-                        "Vehicle Speed Detection with an Uncalibrated Camera",
-                        "Final year project, a computer vision and machine learning project to try to estimate the speed of oncoming vehicles from a single video without any information on the environment or camera angles and perspective. Using Visual Studio Code as the text editor/IDE.",
-                        Tags([
-                          "Python",
-                          "PyQt5",
-                          "YOLOv4",
-                          "OpenCV",
-                        ]),
-                        [
-                          Statics.cvProject,
-                        ]),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: Statics.DEVICE_HEIGHT(context) * 0.075,
-                  ),
-                  child: ProjectCard(
                     imgWidth: Statics.DEVICE_WIDTH(context) * 0.12,
                     project: Project(
                         "FakeBook: Social Media App",

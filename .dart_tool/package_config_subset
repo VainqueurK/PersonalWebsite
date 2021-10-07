@@ -42,6 +42,10 @@ cupertino_icons
 2.12
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/lib/
+dev_icons
+2.12
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/dev_icons-1.0.0/
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/dev_icons-1.0.0/lib/
 fake_async
 2.12
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/
@@ -62,6 +66,14 @@ flutter_lints
 2.12
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib/
+flutter_screenutil
+2.12
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0+2/
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0+2/lib/
+font_awesome_flutter
+2.12
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.1.0/
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.1.0/lib/
 google_fonts
 2.12
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.1.0/

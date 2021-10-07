@@ -17,7 +17,7 @@ class ProjectCard extends StatefulWidget {
   ProjectCard({
     Key? key,
     this.fontColor = Colors.black87,
-    this.fontFamily = "roboto",
+    this.fontFamily = 'Rubik',
     this.fontSize = 18,
     this.imgHeight = -1,
     this.imgWidth = -1,
@@ -174,7 +174,7 @@ class _ProjectCardState extends State<ProjectCard> {
                         Expanded(
                           flex: 1,
                           child: SingleChildScrollView(
-                            child: Text(
+                            child: SelectableText(
                               widget.project.desc,
                               style: TextStyle(
                                   color: widget.fontColor,

@@ -40,6 +40,9 @@ dependencies:
   url_strategy: ^0.2.0
   google_fonts: ^2.1.0
   fluro: ^2.0.3
+  flutter_screenutil: ^5.0.0+2
+  font_awesome_flutter: ^9.1.0
+  dev_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:

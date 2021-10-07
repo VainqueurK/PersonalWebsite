@@ -1,6 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:static_website/components/project_card.dart';
 import 'package:static_website/config/statics.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -27,11 +28,13 @@ class _HomePageState extends State<HomePage> {
   Color? aboutTextColor = Colors.grey[800];
   Color? projectsTextColor = Colors.grey[800];
   Color? contactTextColor = Colors.grey[800];
-  Color? downloadTextColor = Colors.grey[400];
+  Color? downloadTextColor = Colors.grey[300];
+  Color? gitIconTextColor = Colors.grey[300];
+  Color? linkedInIconTextColor = Colors.grey[300];
 
   Color? normalColor = Colors.grey[800];
-  Color? normalColor2 = Colors.grey[400];
-  Color? hoverColor = const Color(0xFFFFB52E);
+  Color? normalColor2 = Colors.grey[300];
+  Color? hoverColor = const Color(0xFFFFA500);
 
   @override
   Widget build(BuildContext context) {
@@ -72,16 +75,25 @@ class _HomePageState extends State<HomePage> {
                           InkWell(
                             onTap: () =>
                                 launch('https://github.com/VainqueurK'),
+                            onHover: (hover) {
+                              setState(() {
+                                gitIconTextColor =
+                                    hover ? hoverColor : normalColor2;
+                              });
+                            },
                             child: Container(
-                                constraints: const BoxConstraints(
-                                    minWidth: 140, minHeight: 100),
-                                height: Statics.DEVICE_HEIGHT(context) * 0.05,
-                                width: Statics.DEVICE_WIDTH(context) * 0.05,
-                                child: Image.asset(
-                                  'assets/imgs/GitHub-Emblem.png',
-                                  filterQuality: FilterQuality.high,
-                                  fit: BoxFit.fitWidth,
-                                )),
+                              constraints: const BoxConstraints(
+                                  minWidth: 140, minHeight: 100),
+                              height: Statics.DEVICE_HEIGHT(context) * 0.05,
+                              width: Statics.DEVICE_WIDTH(context) * 0.05,
+                              child: FittedBox(
+                                fit: BoxFit.fitHeight,
+                                child: FaIcon(
+                                  FontAwesomeIcons.githubSquare,
+                                  color: gitIconTextColor,
+                                ),
+                              ),
+                            ),
                           ),
                           SizedBox(
                             width: Statics.DEVICE_WIDTH(context) * 0.03,
@@ -89,16 +101,25 @@ class _HomePageState extends State<HomePage> {
                           InkWell(
                             onTap: () => launch(
                                 'https://www.linkedin.com/in/vainqueur/'),
+                            onHover: (hover) {
+                              setState(() {
+                                linkedInIconTextColor =
+                                    hover ? hoverColor : normalColor2;
+                              });
+                            },
                             child: Container(
-                                constraints: const BoxConstraints(
-                                    minWidth: 140, minHeight: 100),
-                                height: Statics.DEVICE_HEIGHT(context) * 0.05,
-                                width: Statics.DEVICE_WIDTH(context) * 0.05,
-                                child: Image.asset(
-                                  'assets/imgs/linkedin-logo2.png',
-                                  filterQuality: FilterQuality.high,
-                                  fit: BoxFit.fitWidth,
-                                )),
+                              constraints: const BoxConstraints(
+                                  minWidth: 140, minHeight: 100),
+                              height: Statics.DEVICE_HEIGHT(context) * 0.05,
+                              width: Statics.DEVICE_WIDTH(context) * 0.05,
+                              child: FittedBox(
+                                fit: BoxFit.fitHeight,
+                                child: FaIcon(
+                                  FontAwesomeIcons.linkedin,
+                                  color: linkedInIconTextColor,
+                                ),
+                              ),
+                            ),
                           ),
                         ],
                       ),

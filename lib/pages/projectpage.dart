@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:static_website/components/project_card.dart';
 import 'package:static_website/components/project_list.dart';
 import 'package:static_website/config/statics.dart';
@@ -44,33 +45,53 @@ class _ProjectsPageState extends State<ProjectsPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 20,
-                        ),
-                        child: InkWell(
-                          onTap: () async {
-                            MyRouter.router.navigateTo(
-                                context, MyRoutes.homeRoute,
-                                transition: TransitionType.cupertino,
-                                transitionDuration:
-                                    const Duration(milliseconds: 750));
-                          },
-                          onHover: (hover) {
-                            setState(() {
-                              projectsTextColor =
-                                  hover ? hoverColor : normalColor;
-                            });
-                          },
-                          child: Text(
-                            "< Home",
-                            style: TextStyle(
-                              fontFamily: 'Rubik',
-                              fontSize: 30,
-                              color: projectsTextColor,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 20,
+                            ),
+                            child: InkWell(
+                              onTap: () async {
+                                MyRouter.router.navigateTo(
+                                    context, MyRoutes.homeRoute,
+                                    transition: TransitionType.cupertino,
+                                    transitionDuration:
+                                        const Duration(milliseconds: 750));
+                              },
+                              onHover: (hover) {
+                                setState(() {
+                                  projectsTextColor =
+                                      hover ? hoverColor : normalColor;
+                                });
+                              },
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 20,
+                                      vertical: 20,
+                                    ),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.arrowLeft,
+                                      size: 20,
+                                      color: projectsTextColor,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Home",
+                                    style: TextStyle(
+                                      fontFamily: 'Roboto',
+                                      fontSize: 30,
+                                      color: projectsTextColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
                       ProjectSection(),
                     ],

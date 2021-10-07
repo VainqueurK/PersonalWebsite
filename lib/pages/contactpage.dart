@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:static_website/config/statics.dart';
 import 'package:static_website/routing/router.dart';
 import 'package:static_website/routing/routes.dart';
@@ -46,13 +47,28 @@ class _ContactPageState extends State<ContactPage> {
                         projectsTextColor = hover ? hoverColor : normalColor;
                       });
                     },
-                    child: Text(
-                      "< Home",
-                      style: TextStyle(
-                        fontFamily: 'Rubik',
-                        fontSize: 30,
-                        color: projectsTextColor,
-                      ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 20,
+                          ),
+                          child: FaIcon(
+                            FontAwesomeIcons.arrowLeft,
+                            size: 20,
+                            color: projectsTextColor,
+                          ),
+                        ),
+                        Text(
+                          "Home",
+                          style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 30,
+                            color: projectsTextColor,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
