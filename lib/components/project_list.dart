@@ -28,7 +28,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                 style: TextStyle(
                   fontFamily: 'Rubik',
                   fontSize: 80,
-                  color: Colors.grey[400],
+                  color: Colors.grey[200],
                 ),
               ),
             ),

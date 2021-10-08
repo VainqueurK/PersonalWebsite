@@ -6,6 +6,7 @@ import 'package:static_website/routing/router.dart';
 import 'package:static_website/routing/routes.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
 import "package:dev_icons/dev_icons.dart";
+import 'dart:math' as math;
 
 class AboutPage extends StatefulWidget {
   final String page;
@@ -18,7 +19,7 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   Color? projectsTextColor = Colors.grey[500];
   Color? normalColor = Colors.grey[500];
-  Color? hoverColor = const Color(0xFFFFB52E);
+  Color? hoverColor = const Color(0xFFFFA500);
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +183,7 @@ class _AboutPageState extends State<AboutPage> {
                                       children: [
                                         Container(
                                           child: SelectableText(
-                                            "Me",
+                                            "My qualties",
                                             style: TextStyle(
                                               fontSize: 28,
                                               fontFamily: 'Rubik',
@@ -199,7 +200,7 @@ class _AboutPageState extends State<AboutPage> {
                                           child: const Align(
                                             alignment: Alignment.centerLeft,
                                             child: SelectableText(
-                                              "I am an innovative, hardworking, and pro-active with excellent problem solving, interpersonal and teamwork skills, and experience across IT Disciplines including Web, Application and Mobile Development. I thrive upon challenges and overcoming the unknown.",
+                                              "I am an innovative, hardworking, and pro-active individual with excellent problem solving skills. I thrive upon challenges and overcoming the unknown, and most importantly, I'm always willing to learn.",
                                               style: TextStyle(
                                                 fontSize: 20,
                                                 fontFamily: 'Rubik',
@@ -318,7 +319,525 @@ class _AboutPageState extends State<AboutPage> {
                                   ),
                                 ),
                               ],
-                            )
+                            ),
+                            SizedBox(
+                              height: Statics.DEVICE_HEIGHT(context) * 0.07,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: SelectableText(
+                                      "My Timeline",
+                                      style: TextStyle(
+                                        fontSize: 55,
+                                        fontFamily: 'Rubik',
+                                        color: Colors.grey[900],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: Statics.DEVICE_HEIGHT(context) * 0.05,
+                            ),
+                            Container(
+                              width: Statics.DEVICE_WIDTH(context),
+                              height: Statics.DEVICE_HEIGHT(context),
+                              child: Row(
+                                //LEFT SIDE OF TIMELINE
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      Container(
+                                        width:
+                                            Statics.DEVICE_WIDTH(context) * 0.1,
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.25,
+                                        //color: Colors.white,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Limerick, IE",
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "University of Limerick",
+                                                style: TextStyle(
+                                                  fontSize: 28,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.amber[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "BSc Hons. Computer Science (Common Entry)",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                          right: Statics.DEVICE_WIDTH(context) *
+                                              0.005,
+                                        ),
+                                        width:
+                                            Statics.DEVICE_WIDTH(context) * 0.1,
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.25,
+                                        //color: Colors.white,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Limerick, IE",
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Cook Medical",
+                                                style: TextStyle(
+                                                  fontSize: 28,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.amber[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                ".NET Web Developer And IT Administrator - Placement",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                          right: Statics.DEVICE_WIDTH(context) *
+                                              0.005,
+                                        ),
+                                        width:
+                                            Statics.DEVICE_WIDTH(context) * 0.1,
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.25,
+                                        //color: Colors.white,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Limerick, IE",
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "University of Limerick",
+                                                style: TextStyle(
+                                                  fontSize: 28,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.amber[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "BSc Hons. Computer Systems",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                    ],
+                                  ),
+                                  Stack(
+                                    //ALL THE UI NODES ON TIMELINE
+                                    alignment: Alignment.center,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.topCenter,
+                                        child: Container(
+                                          width: 7,
+                                          height:
+                                              Statics.DEVICE_HEIGHT(context) *
+                                                  0.8,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Colors.grey[900],
+                                          ),
+                                        ),
+                                      ),
+                                      Column(
+                                        children: [
+                                          SizedBox(
+                                            height:
+                                                Statics.DEVICE_HEIGHT(context) *
+                                                    0.127,
+                                          ),
+                                          Stack(
+                                            alignment: Alignment.center,
+                                            children: [
+                                              Transform.rotate(
+                                                angle: -math.pi / 4,
+                                                child: Container(
+                                                  height: 25,
+                                                  width: 25,
+                                                  decoration: BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Colors.grey[900],
+                                                  ),
+                                                ),
+                                              ),
+                                              Transform.rotate(
+                                                angle: -math.pi / 4,
+                                                child: Container(
+                                                  height: 12.5,
+                                                  width: 12.5,
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Colors
+                                                        .white, //Colors.amber[900],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height:
+                                                Statics.DEVICE_HEIGHT(context) *
+                                                    0.25,
+                                          ),
+                                          Stack(
+                                            alignment: Alignment.center,
+                                            children: [
+                                              Transform.rotate(
+                                                angle: -math.pi / 4,
+                                                child: Container(
+                                                  height: 25,
+                                                  width: 25,
+                                                  decoration: BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Colors.grey[900],
+                                                  ),
+                                                ),
+                                              ),
+                                              Transform.rotate(
+                                                angle: -math.pi / 4,
+                                                child: Container(
+                                                  height: 12.5,
+                                                  width: 12.5,
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Colors
+                                                        .white, //Colors.amber[900],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height:
+                                                Statics.DEVICE_HEIGHT(context) *
+                                                    0.25,
+                                          ),
+                                          Stack(
+                                            alignment: Alignment.center,
+                                            children: [
+                                              Transform.rotate(
+                                                angle: -math.pi / 4,
+                                                child: Container(
+                                                  height: 25,
+                                                  width: 25,
+                                                  decoration: BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Colors.grey[900],
+                                                  ),
+                                                ),
+                                              ),
+                                              Transform.rotate(
+                                                angle: -math.pi / 4,
+                                                child: Container(
+                                                  height: 12.5,
+                                                  width: 12.5,
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    shape: BoxShape.rectangle,
+                                                    color: Colors
+                                                        .white, //Colors.amber[900],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                          left: Statics.DEVICE_WIDTH(context) *
+                                              0.08,
+                                        ),
+                                        width: Statics.DEVICE_WIDTH(context) *
+                                            0.25,
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.25,
+                                        //color: Colors.white,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Started College",
+                                                style: TextStyle(
+                                                  fontSize: 45,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[
+                                                      900], //Colors.amber[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Sep. 2017",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                          left: Statics.DEVICE_WIDTH(context) *
+                                              0.08,
+                                        ),
+                                        width: Statics.DEVICE_WIDTH(context) *
+                                            0.25,
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.25,
+                                        //color: Colors.white,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Started Work Placement",
+                                                style: TextStyle(
+                                                  fontSize: 45,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[
+                                                      900], //Colors.amber[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Jun. 2019",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                          left: Statics.DEVICE_WIDTH(context) *
+                                              0.08,
+                                        ),
+                                        width: Statics.DEVICE_WIDTH(context) *
+                                            0.25,
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.25,
+                                        //color: Colors.white,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "Graduated from College",
+                                                style: TextStyle(
+                                                  fontSize: 45,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[
+                                                      900], //Colors.amber[900],
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: Statics.DEVICE_HEIGHT(
+                                                      context) *
+                                                  0.01,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: SelectableText(
+                                                "May. 2021",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontFamily: 'Rubik',
+                                                  color: Colors.grey[900],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: Statics.DEVICE_HEIGHT(context) *
+                                            0.01,
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),

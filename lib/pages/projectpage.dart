@@ -18,8 +18,8 @@ class ProjectsPage extends StatefulWidget {
 }
 
 class _ProjectsPageState extends State<ProjectsPage> {
-  Color? projectsTextColor = Colors.grey[500];
-  Color? normalColor = Colors.grey[500];
+  Color? projectsTextColor = Colors.grey[100];
+  Color? normalColor = Colors.grey[100];
   Color? hoverColor = const Color(0xFFFFB52E);
 
   @override
