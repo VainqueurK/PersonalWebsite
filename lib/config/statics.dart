@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Statics {
+  static bool mobile = false;
+
   static double DEVICE_WIDTH(BuildContext context) =>
       MediaQuery.of(context).size.width;
 
