@@ -38,64 +38,59 @@ class _ProjectsPageState extends State<ProjectsPage> {
                     minHeight: 300,
                   ),
                 ),
-                Container(
-                  height: Statics.DEVICE_HEIGHT(context) * 3,
-                  width: double.infinity,
-                  //color: Colors.grey[100], //Color(0xFF121212),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 20,
-                            ),
-                            child: InkWell(
-                              onTap: () async {
-                                MyRouter.router.navigateTo(
-                                    context, MyRoutes.homeRoute,
-                                    transition: TransitionType.cupertino,
-                                    transitionDuration:
-                                        const Duration(milliseconds: 750));
-                              },
-                              onHover: (hover) {
-                                setState(() {
-                                  projectsTextColor =
-                                      hover ? hoverColor : normalColor;
-                                });
-                              },
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 20,
-                                      vertical: 20,
-                                    ),
-                                    child: FaIcon(
-                                      FontAwesomeIcons.arrowLeft,
-                                      size: 20,
-                                      color: projectsTextColor,
-                                    ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 20,
+                          ),
+                          child: InkWell(
+                            onTap: () async {
+                              MyRouter.router.navigateTo(
+                                  context, MyRoutes.homeRoute,
+                                  transition: TransitionType.cupertino,
+                                  transitionDuration:
+                                      const Duration(milliseconds: 750));
+                            },
+                            onHover: (hover) {
+                              setState(() {
+                                projectsTextColor =
+                                    hover ? hoverColor : normalColor;
+                              });
+                            },
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                    vertical: 20,
                                   ),
-                                  Text(
-                                    "Home",
-                                    style: TextStyle(
-                                      fontFamily: 'Roboto',
-                                      fontSize: 30,
-                                      color: projectsTextColor,
-                                    ),
+                                  child: FaIcon(
+                                    FontAwesomeIcons.arrowLeft,
+                                    size: 20,
+                                    color: projectsTextColor,
                                   ),
-                                ],
-                              ),
+                                ),
+                                Text(
+                                  "Home",
+                                  style: TextStyle(
+                                    fontFamily: 'Roboto',
+                                    fontSize: 30,
+                                    color: projectsTextColor,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                        ],
-                      ),
-                      ProjectSection(),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                    ProjectSection(),
+                  ],
                 ),
               ],
             ),

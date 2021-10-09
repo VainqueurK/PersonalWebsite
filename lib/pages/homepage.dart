@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: () => launch(
-                            'https://drive.google.com/uc?export=download&id=1UqC8LS93YHQBUrIVyL6p_5zF6L8jttQZ'),
+                            'https://drive.google.com/uc?export=download&id=1M5Cem_wC5oQd7MoiR78lpbgTq7aB-YeN'),
                         onHover: (hover) {
                           setState(() {
                             downloadTextColor =
@@ -207,29 +207,29 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: Statics.DEVICE_HEIGHT(context) * 0.04,
                   ),
-                  SizedBox(
-                    child: InkWell(
-                      onTap: () {
-                        MyRouter.router.navigateTo(
-                            context, MyRoutes.contactRoute,
-                            transition: TransitionType.cupertino,
-                            transitionDuration: const Duration(seconds: 1));
-                      },
-                      onHover: (hover) {
-                        setState(() {
-                          contactTextColor = hover ? hoverColor : normalColor;
-                        });
-                      },
-                      child: Text(
-                        "Contact",
-                        style: TextStyle(
-                          fontFamily: 'Rubik',
-                          fontSize: 50,
-                          color: contactTextColor,
-                        ),
-                      ),
-                    ),
-                  ),
+                  // SizedBox(
+                  //   child: InkWell(
+                  //     onTap: () {
+                  //       MyRouter.router.navigateTo(
+                  //           context, MyRoutes.contactRoute,
+                  //           transition: TransitionType.cupertino,
+                  //           transitionDuration: const Duration(seconds: 1));
+                  //     },
+                  //     onHover: (hover) {
+                  //       setState(() {
+                  //         contactTextColor = hover ? hoverColor : normalColor;
+                  //       });
+                  //     },
+                  //     child: Text(
+                  //       "Contact",
+                  //       style: TextStyle(
+                  //         fontFamily: 'Rubik',
+                  //         fontSize: 50,
+                  //         color: contactTextColor,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),

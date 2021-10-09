@@ -25,7 +25,7 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: Statics.DEVICE_HEIGHT(context) * 3,
+        height: Statics.DEVICE_HEIGHT(context) * 2.3,
         width: double.infinity,
         color: Colors.black,
         child: Column(

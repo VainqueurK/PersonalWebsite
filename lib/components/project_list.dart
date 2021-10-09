@@ -40,6 +40,27 @@ class _ProjectSectionState extends State<ProjectSection> {
                     vertical: Statics.DEVICE_HEIGHT(context) * 0.075,
                   ),
                   child: ProjectCard(
+                    imgWidth: Statics.DEVICE_WIDTH(context) * 0.12,
+                    project: Project(
+                        "FakeBook: Social Media App",
+                        "Fakebook is a social media application that was written using java and is compatible with android versions 5 and above. The app offers an integrated messaging system where users can communicate with their friends and anybody that they have connected with on the app. The app also has a modern and slick orange colour scheme and allows for a variety of customization options of your personal profile. The app uses Firebase in order to store user details along with messages by that user.",
+                        Tags(["Java", "JavaFX"]), [
+                      Statics.fakebook1,
+                      Statics.fakebook2,
+                      Statics.fakebook3,
+                      Statics.fakebook4,
+                      Statics.fakebook5,
+                      Statics.fakebook6,
+                      Statics.fakebook8
+                    ]),
+                    link: "https://github.com/VainqueurK/Fakebook_re",
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: Statics.DEVICE_HEIGHT(context) * 0.075,
+                  ),
+                  child: ProjectCard(
                     //website example & windows app
                     imgHeight: Statics.DEVICE_HEIGHT(context) * 0.35,
                     imgWidth: Statics.DEVICE_WIDTH(context) * 0.275,
@@ -57,6 +78,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                         [
                           Statics.cvProject,
                         ]),
+                    link: "https://github.com/VainqueurK/VideoSpeedEstimator",
                   ),
                 ),
                 Padding(
@@ -71,7 +93,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                     wConstraint: 800,
                     project: Project(
                         "Web Portfolio",
-                        "Personal website to display my skills",
+                        "Personal Website / Web Resume",
                         Tags([
                           "Flutter",
                           "Dart",
@@ -79,6 +101,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                         [
                           Statics.webHome,
                         ]),
+                    link: "https://github.com/VainqueurK/PersonalWebsite",
                   ),
                 ),
                 Padding(
@@ -107,26 +130,8 @@ class _ProjectSectionState extends State<ProjectSection> {
                           Statics.mlUsers,
                           Statics.mlAddMachine,
                         ]),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: Statics.DEVICE_HEIGHT(context) * 0.075,
-                  ),
-                  child: ProjectCard(
-                    imgWidth: Statics.DEVICE_WIDTH(context) * 0.12,
-                    project: Project(
-                        "FakeBook: Social Media App",
-                        "Fakebook is a social media application that was written using java and is compatible with android versions 5 and above. The app offers an integrated messaging system where users can communicate with their friends and anybody that they have connected with on the app. The app also has a modern and slick orange colour scheme and allows for a variety of customization options of your personal profile. The app uses Firebase in order to store user details along with messages by that user.",
-                        Tags(["Java", "JavaFX"]), [
-                      Statics.fakebook1,
-                      Statics.fakebook2,
-                      Statics.fakebook3,
-                      Statics.fakebook4,
-                      Statics.fakebook5,
-                      Statics.fakebook6,
-                      Statics.fakebook8
-                    ]),
+                    link:
+                        "https://github.com/VainqueurK/Machinary_Lender_System",
                   ),
                 ),
               ],
